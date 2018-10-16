@@ -7,8 +7,8 @@ class admin(models.Model):
 
 class board(models.Model):
     backgroundpath = models.CharField(max_length=50)
-    boardtiltX = models.DecimalField()
-    boardtiltY = models.DecimalField()
+    boardtiltX = models.DecimalField(max_digits=10, decimal_places=2)
+    boardtiltY = models.DecimalField(max_digits=10, decimal_places=2)
     boardRotate = models.IntegerField()
     boardR = models.IntegerField()
     boardG = models.IntegerField()
@@ -32,7 +32,7 @@ class stim(models.Model):
     stimR = models.IntegerField()
     stimG = models.IntegerField()
     stimB = models.IntegerField()
-    stimrotate = models.DecimalField()
+    stimrotate = models.DecimalField(max_digits=10, decimal_places=2)
     stimsetID = models.IntegerField()
 
 class stimResults(models.Model):
@@ -40,12 +40,12 @@ class stimResults(models.Model):
     stimR = models.IntegerField()
     stimG = models.IntegerField()
     stimB = models.IntegerField()
-    stimrotate = models.DecimalField()
+    stimrotate = models.DecimalField(max_digits=10, decimal_places=2)
     stimpath = models.CharField(max_length=50)
-    stimX = models.DecimalField()
-    stimY = models.DecimalField()
+    stimX = models.DecimalField(max_digits=10, decimal_places=2)
+    stimY = models.DecimalField(max_digits=10, decimal_places=2)
 
 class stimSet(models.Model):
     adminID = models.IntegerField()
-    path = models.CharField()
+    path = models.CharField(max_length=55)
 
