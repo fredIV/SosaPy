@@ -54,6 +54,8 @@ ROOT_URLCONF = 'SosaPy.urls'
 
 TEMPLATES = [
     {
+
+        #attaching django backend
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')]
         ,
@@ -77,8 +79,11 @@ WSGI_APPLICATION = 'SosaPy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Sosa',
+        'USER': 'jamieh',
+        'PASSWORD': 'django',
+        'PORT': '5432'
     }
 }
 
