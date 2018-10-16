@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/mobile.css" %}">
+{% endblock %}
+
+{% block js %}
+    <script>
+        function reset() {
+            <!--Change this to fit Django syntax-->
+            window.location = "login.html";
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="mx-auto rounded text-center">
+            <h3>Oops!</h3>
+            <small>Your screen size is too small. If you are using a mobile device, please access SOSA on a computer. If you are using a computer, please resize your browser and click Reset.</small>
+            <div class="row justify-content-center">
+                <button type="button" class="btn btn-primary" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

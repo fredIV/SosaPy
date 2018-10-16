@@ -1,0 +1,29 @@
+/* Inspired by Sunil Rajput at Bootsnipp */
+
+body {
+	background-image: url("../img/purple-background.jpg");
+	background-repeat: no-repeat;
+	background-size: 3000px 2000px;
+}
+
+.container {
+	align-content: center;
+	padding-top: 8%;
+}
+
+.mx-auto {
+	width: 350px;
+	margin: 20px;
+	background-color: #f7f7f7;
+	opacity: 0.8;
+	padding: 20px;
+}
+
+img {
+	margin-bottom: 10px;
+}
+
+form {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
