@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>Test Board</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+
+		<!--<script src="js/three.min.js"></script> -->
+		<script src="js/three.js"></script>
+		<script src="js/OrbitControls.js"></script>
+
+		<script>
+
+
+			var scene = new THREE.Scene();
+			scene.background = new THREE.Color(0x38333a);
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight);
+			document.body.appendChild( renderer.domElement );
+
+			 var light = new THREE.PointLight(0xffffff);
+			light.position.set(0,0,1000);
+			scene.add(light);
+
+			var geometry = new THREE.CubeGeometry( 24, 24, 2.4);
+
+			var material = new THREE.MeshStandardMaterial( {color: 0xffffff} );
+			var cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+
+			camera.position.z = 20;
+
+			controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+			controls.minDistance = 20;
+			controls.maxDistance = 50;
+			controls.minPolarAngle = Math.PI/4;
+			controls.maxPolarAngle = (Math.PI/4) + (Math.PI/2);
+			controls.minAzimuthAngle = -Math.PI/4;
+			controls.maxAzimuthAngle = Math.PI/4;
+
+
+			var animate = function () {
+				requestAnimationFrame( animate );
+
+				//cube.rotation.x += 0.01;
+				//cube.rotation.y += 0.01;
+
+
+				renderer.render( scene, camera );
+				controls.update();
+			};
+
+			animate();
+
+		</script>
+	</body>
+</html>
