@@ -9,7 +9,7 @@
     <script>
         function reset() {
             <!--Change this to fit Django style-->
-            window.location = "login.html";
+            window.location = {% url 'login' %};
         }
     </script>
 {% endblock %}
