@@ -3,4 +3,7 @@ function hideMobile() {
 	if (width.matches) {
 		window.location = "mobile";
 	}
+	else {
+		window.resizeTo(500,500);
+	}
 }
