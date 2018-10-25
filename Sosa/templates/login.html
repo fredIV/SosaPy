@@ -10,22 +10,17 @@
 {% endblock %}
 
 {% block content %}
-	<div class="container">
-		<div class="mx-auto rounded text-center">
-			<img src="{% static "img/Psychology_image.png" %}" width="150" height="150">
-			<h2>Welcome to SOSA!</h2>
-			<small>This login page is for administrators. To participate in an experiment, click the test link that you were given by an administrator.</small>
-			<form>
-				<div class="form-group">
-					<input type="email" class="form-control" id="email" placeholder="Email Address">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" id="password" placeholder="Password">
-				</div>
-				<p id="message"></p>
-				<button type="button" class="btn btn-primary" onclick="passwordCheck()">Login</button>
-			</form>
-            <small>Copyright © Department of Psychology at Georgia Southern 2018</small>
-		</div>
-	</div>
+    <img src="{% static "img/Psychology_image.png" %}" width="150" height="150">
+    <h2>Welcome to SOSA!</h2>
+    <small>This login page is for administrators. To participate in an experiment, click the test link that you were given by an administrator.</small>
+    <form action="passwordCheck()">
+        <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Email Address">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <p id="message"></p>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
 {% endblock %}
