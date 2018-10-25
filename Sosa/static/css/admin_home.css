@@ -12,7 +12,7 @@ body {
 }
 
 .mx-auto {
-	width: 350px;
+	width: 500px;
 	margin: 20px;
 	background-color: #f7f7f7;
 	opacity: 0.8;
@@ -23,6 +23,19 @@ img {
 	margin-bottom: 10px;
 }
 
-form {
-	margin-top: 40px;
+a {
+    margin: 10px;
+    width: 175px;
+}
+
+#settings {
+	width: 60px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.drop-list {
+	width: auto;
+	margin: auto;
 }

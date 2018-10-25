@@ -1,0 +1,11 @@
+{% extends "base_admin.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/create_board.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div id="ThreeJSBoard"></div>
+    <script src="{% static "js/creatorModalBoard.js" %}"></script>
+{% endblock %}

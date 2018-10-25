@@ -1,0 +1,18 @@
+{% extends "base_admin.html" %}
+{% load static %}
+
+{% block css %}
+	<link rel="stylesheet" href="{% static "css/admin_home.css" %}">
+{% endblock %}
+
+{% block content %}
+    <img src="{% static "img/Psychology_image.png" %}" width="150" height="150">
+    <h2>SOSA</h2>
+    <p>Simultaneous Objective and Subjective Assessment</p>
+    <hr>
+    <p>Welcome, Admin!</p>
+    <a href="create_board" class="btn btn-primary">Create Board</a>
+    <a href="#" class="btn btn-primary">Create Stimulus Sets</a>
+    <a href="#" class="btn btn-primary">Experiment</a>
+    <a href="#" class="btn btn-primary">View Results</a>
+{% endblock %}

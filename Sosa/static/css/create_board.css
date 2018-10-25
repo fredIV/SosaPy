@@ -12,17 +12,26 @@ body {
 }
 
 .mx-auto {
-	width: 350px;
+	width: 700px;
 	margin: 20px;
 	background-color: #f7f7f7;
 	opacity: 0.8;
 	padding: 20px;
 }
 
-img {
-	margin-bottom: 10px;
+a {
+    margin: 10px;
+    width: 175px;
 }
 
-form {
-	margin-top: 40px;
+#settings {
+	width: 60px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.drop-list {
+	width: auto;
+	margin: auto;
 }
