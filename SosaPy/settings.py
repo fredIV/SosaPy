@@ -77,12 +77,14 @@ WSGI_APPLICATION = 'SosaPy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# IMPORTANT
+# For development purposes make sure that these are updated to match your local database parameters
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Sosa',
-        'USER': 'jamieh',
-        'PASSWORD': 'django',
+        'NAME': 'pSosa',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
         'PORT': '5432'
     }
 }
