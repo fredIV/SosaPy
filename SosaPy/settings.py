@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'SosaPy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Sosa',
-        'USER': 'jamieh',
-        'PASSWORD': 'django',
+        'NAME': 'pSosa',
+        'USER': 'postgres',
+        'PASSWORD': 'Aohnst1!',
         'PORT': '5432'
     }
 }
