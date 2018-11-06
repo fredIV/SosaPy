@@ -11,8 +11,8 @@ function initBoard() {
   BoardScene = new THREE.Scene();
 
   // CAMERA
-  var SCREEN_WIDTH = 500, SCREEN_HEIGHT = 500;
-  var VIEW_ANGLE = 5, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 20000;
+  let SCREEN_WIDTH = 500, SCREEN_HEIGHT = 500;
+  let VIEW_ANGLE = 5, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 20000;
   BoardCamera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
   BoardScene.add(BoardCamera);
   BoardCamera.position.set(0,0,400);
@@ -44,13 +44,13 @@ function initBoard() {
   BoardScene.add( dirLight );
 
   // SKYBOX/FOG
-  var skyBoxGeometry = new THREE.CubeGeometry( 10000, 10000, 10000 );
+  let skyBoxGeometry = new THREE.CubeGeometry( 10000, 10000, 10000 );
   skyBoxMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.BackSide } );
-  var skyBox = new THREE.Mesh( skyBoxGeometry, skyBoxMaterial );
+  let skyBox = new THREE.Mesh( skyBoxGeometry, skyBoxMaterial );
   BoardScene.add(skyBox);
 
   //Board
-  var board = new THREE.PlaneGeometry(24, 24);
+  let board = new THREE.PlaneGeometry(24, 24);
   Boardmaterial = new THREE.MeshPhongMaterial({ color: 0x000000, specular: 0x05050, ambientLight: 0x0, shininess: 30 });
   BoardMesh = new THREE.Mesh( board, Boardmaterial );
   BoardMesh.position.set(0,0,0);
@@ -62,8 +62,8 @@ function initBoard() {
   <!--End Test-->
 
   //Creates meshes on the sides of the board to make it look 3D
-  var BoardSideGeo = new THREE.PlaneGeometry(24,1);
-  var BoardSideMat = new THREE.MeshPhongMaterial({ color: 0xC0C0C0});
+  let BoardSideGeo = new THREE.PlaneGeometry(24,1);
+  let BoardSideMat = new THREE.MeshPhongMaterial({ color: 0xC0C0C0});
   var BoardSide = new THREE.Mesh(BoardSideGeo, BoardSideMat);
   BoardSide.position.set(0 , 12, -0.5);
   BoardSide.rotation.x = -Math.PI/2;
@@ -97,9 +97,9 @@ function rgbToHex(rgb){
   return hex;
 
   function fullColorHex(r,g,b){
-    var red = rgbToHex(r);
-    var green = rgbToHex(g);
-    var blue = rgbToHex(b);
+    let red = rgbToHex(r);
+    let green = rgbToHex(g);
+    let blue = rgbToHex(b);
     return red+green+blue;
   }
 }
@@ -147,9 +147,9 @@ function setZoomLock(){
 //updates the color of the board
 function setBoardRGB(){
 
-  var redHex = rgbToHex(document.getElementById("BoardRvalue").value);
-  var greenHex = rgbToHex(document.getElementById("BoardGvalue").value);
-  var blueHex = rgbToHex(document.getElementById("BoardBvalue").value);
+  let redHex = rgbToHex(document.getElementById("BoardRvalue").value);
+  let greenHex = rgbToHex(document.getElementById("BoardGvalue").value);
+  let blueHex = rgbToHex(document.getElementById("BoardBvalue").value);
   BoardColor = "0x" + redHex + greenHex + blueHex;
 
   if(!BoardCoverBool){
@@ -159,18 +159,18 @@ function setBoardRGB(){
 
 //updates the color of the background
 function setBackgroundRGB(){
-  var redHex = rgbToHex(document.getElementById("BackgroundRvalue").value);
-  var greenHex = rgbToHex(document.getElementById("BackgroundGvalue").value);
-  var blueHex = rgbToHex(document.getElementById("BackgroundBvalue").value);
-  var stringHex = "0x" + redHex + greenHex + blueHex;
+  let redHex = rgbToHex(document.getElementById("BackgroundRvalue").value);
+  let greenHex = rgbToHex(document.getElementById("BackgroundGvalue").value);
+  let blueHex = rgbToHex(document.getElementById("BackgroundBvalue").value);
+  let stringHex = "0x" + redHex + greenHex + blueHex;
   skyBoxMaterial.color.setHex(stringHex);
 }
 
 //updates the color of the board cover
 function setBoardCoverRGB(){
-  var redHex = rgbToHex(document.getElementById("CoverRvalue").value);
-  var greenHex = rgbToHex(document.getElementById("CoverGvalue").value);
-  var blueHex = rgbToHex(document.getElementById("CoverBvalue").value);
+  let redHex = rgbToHex(document.getElementById("CoverRvalue").value);
+  let greenHex = rgbToHex(document.getElementById("CoverGvalue").value);
+  let blueHex = rgbToHex(document.getElementById("CoverBvalue").value);
   BoardCoverColor = "0x" + redHex + greenHex + blueHex;
 
   if(BoardCoverBool){
