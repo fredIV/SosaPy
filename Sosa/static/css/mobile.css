@@ -1,7 +1,13 @@
 /* Inspired by Sunil Rajput at Bootsnipp */
 
 body {
-	background-image: url("../img/purple-background.jpg");
+	/*background-image: url("../img/purple-background.jpg");*/
+	/*background-repeat: no-repeat;*/
+	/*background-size: 3000px 2000px;*/
+
+	/*background-color: #7C3293;*/
+
+	background-image: url("../img/gradient-background.svg");
 	background-repeat: no-repeat;
 	background-size: 3000px 2000px;
 }
@@ -14,7 +20,7 @@ body {
 .mx-auto {
 	width: 200px;
 	margin: 20px;
-	background-color: #f7f7f7;
+	background-color: #ffffff;
 	opacity: 0.8;
 	padding: 20px;
 }

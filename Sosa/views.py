@@ -29,3 +29,10 @@ def create_board(request):
 
     # Render the create board page
     return render(request, 'create_board.html')
+
+
+def view_results(request):
+    """View function for view results page"""
+
+    # Render the create board page
+    return render(request, 'view_results.html')

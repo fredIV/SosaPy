@@ -1,0 +1,59 @@
+{% extends "base_admin.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/view_results.css" %}">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static "js/view_results.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="dropdown">
+        <select id = "myDropdown" onclick="hiddenToggle()" onchange = "filterResults()" class="dropbtn">Dropdown</select>
+    </div>
+    <p></p>
+
+
+    <table id="myTable" align="center" style="display: block; overflow-y: scroll">
+        <tr class="header">
+            <th style="width:500px;">Experiment Name</th>
+            <th style="width:200px;">User Identifier</th>
+        </tr>
+        <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbkop</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbkop</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Paris specialites</td>
+            <td>France</td>
+        </tr>
+        <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
+    </table>
+{% endblock %}
