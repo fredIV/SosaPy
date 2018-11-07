@@ -1,12 +1,6 @@
 /* Inspired by Sunil Rajput at Bootsnipp */
 
 body {
-	/*background-image: url("../img/purple-background.jpg");*/
-	/*background-repeat: no-repeat;*/
-	/*background-size: 3000px 2000px;*/
-
-	/*background-color: #7C3293;*/
-
 	background-image: url("../img/gradient-background.svg");
 	background-repeat: no-repeat;
 	background-size: 3000px 2000px;
