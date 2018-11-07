@@ -51,7 +51,7 @@ function fillFilterOptions(){
 				//checks if the current cell's text is the same as any cells before it. If it's a duplicate, don't put it/it as new dropdown option.
 					if(option.text == tbl.rows[j].cells[0].innerHTML){
 						duplicate = true;
-						alert(option.text + " TO " + tbl.rows[j].cells[0].innerHTML);
+						// alert(option.text + " TO " + tbl.rows[j].cells[0].innerHTML);
 
 					}
 				}
@@ -62,7 +62,7 @@ function fillFilterOptions(){
 
 				//setting the cells onclick function
 				tbl.rows[i].cells[0].onclick = function(){
-					getval(this);
+					// TODO add functionality here
 				}
 
 			}
