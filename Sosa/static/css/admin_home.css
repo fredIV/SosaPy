@@ -28,6 +28,13 @@ a {
     width: 175px;
 }
 
+#home {
+	width: 60px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 #settings {
 	width: 60px;
 	position: absolute;

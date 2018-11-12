@@ -25,11 +25,23 @@ a {
     width: auto;
 }
 
+#home {
+	width: 60px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 #settings {
 	width: 60px;
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+
+.drop-list {
+	width: auto;
+	margin: auto;
 }
 
 #myTable {
