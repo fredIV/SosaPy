@@ -3,8 +3,6 @@
 
 {% block css %}
     <link rel="stylesheet" href="{% static "css/create_board.css" %}">
-    <link rel="stylesheet" href="{% static "css/freelancer.css" %}">
-
 {% endblock %}
 
 {% block content %}
@@ -34,20 +32,21 @@
                   </div>
                   <div>
                     <div id="displaySliderBoard" style="display: block;">
-                      <input type="range" min="0" max="255" value="0" class="slider mb-3" id="BoardRvalue" onchange = "setBoardRGB()">
-                      <input type="range" min="0" max="255" value="0" class="slider mb-3" id="BoardGvalue" onchange = "setBoardRGB()">
-                      <input type="range" min="0" max="255" value="0" class="slider mb-4" id="BoardBvalue" onchange = "setBoardRGB()">
+                      <input type="range" min="0" max="255" value="255" class="slider mb-3" id="BoardRvalue" onchange = "setBoardRGB()">
+                      <input type="range" min="0" max="255" value="255" class="slider mb-3" id="BoardGvalue" onchange = "setBoardRGB()">
+                      <input type="range" min="0" max="255" value="255" class="slider mb-4" id="BoardBvalue" onchange = "setBoardRGB()">
                     </div>
                     <div id="displaySliderBackground" style="display: none;">
-                      <input type="range" min="0" max="255" value="255" class="slider mb-3" id="BackgroundRvalue" onchange = "setBackgroundRGB()">
-                      <input type="range" min="0" max="255" value="255" class="slider mb-3" id="BackgroundGvalue" onchange = "setBackgroundRGB()">
-                      <input type="range" min="0" max="255" value="255" class="slider mb-4" id="BackgroundBvalue" onchange = "setBackgroundRGB()">
+                      <input type="range" min="0" max="255" value="0" class="slider mb-3" id="BackgroundRvalue" onchange = "setBackgroundRGB()">
+                      <input type="range" min="0" max="255" value="0" class="slider mb-3" id="BackgroundGvalue" onchange = "setBackgroundRGB()">
+                      <input type="range" min="0" max="255" value="0" class="slider mb-4" id="BackgroundBvalue" onchange = "setBackgroundRGB()">
                     </div>
                     <div id="displaySliderCover" style="display: none;">
                       <input type="range" min="0" max="255" value="0" class="slider mb-3" id="CoverRvalue" onchange = "setBoardCoverRGB()">
                       <input type="range" min="0" max="255" value="0" class="slider mb-3" id="CoverGvalue" onchange = "setBoardCoverRGB()">
                       <input type="range" min="0" max="255" value="255" class="slider mb-4" id="CoverBvalue" onchange = "setBoardCoverRGB()">
                     </div>
+                  </div>
 
      <script src="{% static "js/RGB_value_generator.js" %}"></script>
 
