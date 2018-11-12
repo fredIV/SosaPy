@@ -20,8 +20,9 @@ body {
 }
 
 a {
-    margin: 10px;
-    width: 175px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: auto;
 }
 
 #settings {
