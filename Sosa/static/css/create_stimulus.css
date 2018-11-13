@@ -8,7 +8,7 @@ body {
 
 .container {
 	align-content: center;
-	padding-top: 4%;
+	padding-top: 8%;
 }
 
 .mx-auto {
@@ -20,8 +20,9 @@ body {
 }
 
 a {
-    margin: 10px;
-    width: 175px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: auto;
 }
 
 #home {
@@ -42,3 +43,27 @@ a {
 	width: auto;
 	margin: auto;
 }
+
+#myTable {
+    margin-top: 60px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTable th, #myTable td {
+    width: 330px;
+    text-align: center;
+    padding: 12px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header {
+    background-color: #f1f1f1;
+}
+
+
+.show {display: block;}

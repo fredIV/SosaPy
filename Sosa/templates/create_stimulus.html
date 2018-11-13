@@ -1,0 +1,36 @@
+{% extends "base_admin.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/create_stimulus.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <table id="myTable" align="center" style="display: block; overflow-y: scroll">
+                <tr class="header">
+                    <th>Your Stimuli</th>
+                </tr>
+                <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
+                <tr>
+                    <td><a href="#">Stimulus 1</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Stimulus 2</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Stimulus 3</a></td>
+                </tr>
+                <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
+            </table>
+        </div>
+        <div class="col-6">
+            <div class="jumbotron">
+                <h3>Insert Stimulus Here</h3>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary">Save</button>
+    <button class="btn btn-primary">Next</button>
+{% endblock %}

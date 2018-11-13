@@ -50,3 +50,10 @@ def stim_sets(request):
 
     # Render the board list page
     return render(request, 'stim_sets.html')
+
+
+def create_stimulus(request):
+    """View function for the stimulus creation page"""
+
+    # Render the stimulus creation page
+    return render(request, 'create_stimulus.html')
