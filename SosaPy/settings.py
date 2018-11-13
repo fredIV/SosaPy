@@ -54,8 +54,6 @@ ROOT_URLCONF = 'SosaPy.urls'
 
 TEMPLATES = [
     {
-
-        #attaching django backend
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')]
         ,

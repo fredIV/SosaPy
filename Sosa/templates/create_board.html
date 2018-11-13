@@ -7,5 +7,47 @@
 
 {% block content %}
     <div id="ThreeJSBoard"></div>
+
     <script src="{% static "js/creatorModalBoard.js" %}"></script>
+    <script src="{% static "js/RGB_value_generator.js" %}"></script>
+
+
+     <div class="row">
+
+                    <div class="flex-column m-auto align-self-end text-center">
+                      <button onclick="displayColorSliderBoard()" value ="board" class="btn btn-secondary btn-shadow bg-primary" id="boardBtn">Board</button>
+                      <button onclick="displayColorSliderBackground()" value ="background" class="btn btn-secondary btn-shadow" id="backgroundBtn">Background</button>
+                      <button onclick="displayColorSliderCover()" value ="cover" class="btn btn-secondary btn-shadow" id="coverBtn">Cover</button>
+
+                      <div id="displayValueBoard" class="pt-3 text-center" style="display: block;">
+                        Value: (<span id="Rbv"></span>, <span id="Gbv"></span>, <span id="Bbv"></span>)
+                      </div>
+                      <div id="displayValueBackground" class="pt-3 text-center" style="display: none;">
+                        Value: (<span id="Rbgv"></span>, <span id="Gbgv"></span>, <span id="Bbgv"></span>)
+                      </div>
+                      <div id="displayValueCover" class="pt-3 text-center" style="display: none;">
+                        Value: (<span id="Rcv"></span>, <span id="Gcv"></span>, <span id="Bcv"></span>)
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div id="displaySliderBoard" style="display: block;">
+                      <input type="range" min="0" max="255" value="255" class="slider mb-3" id="BoardRvalue" onchange = "setBoardRGB()">
+                      <input type="range" min="0" max="255" value="255" class="slider mb-3" id="BoardGvalue" onchange = "setBoardRGB()">
+                      <input type="range" min="0" max="255" value="255" class="slider mb-4" id="BoardBvalue" onchange = "setBoardRGB()">
+                    </div>
+                    <div id="displaySliderBackground" style="display: none;">
+                      <input type="range" min="0" max="255" value="0" class="slider mb-3" id="BackgroundRvalue" onchange = "setBackgroundRGB()">
+                      <input type="range" min="0" max="255" value="0" class="slider mb-3" id="BackgroundGvalue" onchange = "setBackgroundRGB()">
+                      <input type="range" min="0" max="255" value="0" class="slider mb-4" id="BackgroundBvalue" onchange = "setBackgroundRGB()">
+                    </div>
+                    <div id="displaySliderCover" style="display: none;">
+                      <input type="range" min="0" max="255" value="0" class="slider mb-3" id="CoverRvalue" onchange = "setBoardCoverRGB()">
+                      <input type="range" min="0" max="255" value="0" class="slider mb-3" id="CoverGvalue" onchange = "setBoardCoverRGB()">
+                      <input type="range" min="0" max="255" value="255" class="slider mb-4" id="CoverBvalue" onchange = "setBoardCoverRGB()">
+                    </div>
+                  </div>
+
+     <script src="{% static "js/RGB_value_generator.js" %}"></script>
+
 {% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base_admin.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/board_list.css" %}">
+{% endblock %}
+
+{% block content %}
+    <table id="myTable" align="center" style="display: block; overflow-y: scroll">
+        <tr class="header">
+            <th>Your Boards</th>
+        </tr>
+        <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
+        <tr>
+            <td><a href="create_board">Board 1</a></td>
+        </tr>
+        <tr>
+            <td><a href="create_board">Board 2</a></td>
+        </tr>
+        <tr>
+            <td><a href="create_board">Board 3</a></td>
+        </tr>
+        <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
+    </table>
+    <a href="create_board" class="btn btn-primary" id="createNew">Create New Board</a>
+{% endblock %}

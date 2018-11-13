@@ -1,0 +1,26 @@
+{% extends "base_admin.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/stim_sets.css" %}">
+{% endblock %}
+
+{% block content %}
+    <table id="myTable" align="center" style="display: block; overflow-y: scroll">
+        <tr class="header">
+            <th>Your Stimulus Sets</th>
+        </tr>
+        <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
+        <tr>
+            <td><a href="#">Stimulus Set 1</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">Stimulus Set 2</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">Stimulus Set 3</a></td>
+        </tr>
+        <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
+    </table>
+    <a href="#" class="btn btn-primary">Create New Stimulus Set</a>
+{% endblock %}

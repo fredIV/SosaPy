@@ -12,20 +12,22 @@ body {
 }
 
 .mx-auto {
-	width: 500px;
+	width: 700px;
 	margin: 20px;
 	background-color: #ffffff;
 	opacity: 0.8;
 	padding: 20px;
 }
 
-img {
-	margin-bottom: 10px;
-}
-
 a {
     margin: 10px;
     width: 175px;
+}
+
+#createNew {
+	margin-top: 20px;
+    margin-bottom: 10px;
+    width: auto;
 }
 
 #home {
@@ -46,3 +48,27 @@ a {
 	width: auto;
 	margin: auto;
 }
+
+#myTable {
+    margin-top: 60px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTable th, #myTable td {
+    width: 660px;
+    text-align: center;
+    padding: 12px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header {
+    background-color: #f1f1f1;
+}
+
+
+.show {display: block;}

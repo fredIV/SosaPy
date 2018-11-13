@@ -36,3 +36,17 @@ def view_results(request):
 
     # Render the create board page
     return render(request, 'view_results.html')
+
+
+def board_list(request):
+    """View function for the board list page"""
+
+    # Render the board list page
+    return render(request, 'board_list.html')
+
+
+def stim_sets(request):
+    """View function for the stim sets page"""
+
+    # Render the board list page
+    return render(request, 'stim_sets.html')
