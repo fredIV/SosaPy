@@ -45,7 +45,7 @@ a {
 }
 
 #myTable {
-    margin-top: 60px;
+    margin-top: 20px;
     border-collapse: collapse;
     border: 1px solid #ddd;
     font-size: 18px;
@@ -65,5 +65,8 @@ a {
     background-color: #f1f1f1;
 }
 
+#ThreeJSPeg {
+	margin-top: 20px;
+}
 
 .show {display: block;}
