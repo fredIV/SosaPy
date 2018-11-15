@@ -25,11 +25,51 @@
                 <!--FILL IN THE TABLE WITH RESULTS FROM THE DATABASE-->
             </table>
         </div>
+
+        <div class="stimSelect">
+            <select id="shapes">
+                <option>Cylinder</option>
+                <option>Cone</option>
+                <option>Cube</option>
+            </select>
+        </div>
         <div class="col-6">
             <div id="ThreeJSPeg"></div>
             <script src="{% static "js/createStimulus.js" %}"></script>
+
+
+                <button onclick="displayColorSliderLabel()" type="button" class="btn btn-secondary btn-shadow" id="labelBtn">Label</button>
+                <button onclick="displayColorSliderStimulus()" type="button" class="btn btn-secondary btn-shadow bg-primary" id="pegBtn">Peg</button>
+
+                        <div id="displayValueLabelStimulus" class="text-center" style="display: none;">
+                            Value: (<span id="lR"></span>, <span id="lG"></span>, <span id="lB"></span>)
+                          </div>
+                          <div id="displayValuePeg" class="text-center" style="display: block;">
+                            Value: (<span id="sR"></span>, <span id="sG"></span>, <span id="sB"></span>)
+                          </div>
+
+                        <div id="displaySliderStimulus" class="pt-3" style="width: 250px; display: block;">
+                        <input type="range" min="0" max="255" value="0" class="slider mb-3" id="RvalueStim" onchange = "setPegRGB()">
+                        <input type="range" min="0" max="255" value="0" class="slider mb-3" id="GvalueStim" onchange = "setPegRGB()">
+                        <input type="range" min="0" max="255" value="0" class="slider mb-4" id="BvalueStim" onchange = "setPegRGB()">
+                      </div>
+                      <div id="displaySliderLabel" class="pt-3" style="width: 250px; display: none;">
+                        <input type="range" min="0" max="255" value="0" class="slider mb-3" id="lRvalueStim" onchange = "setLabelRGB()">
+                        <input type="range" min="0" max="255" value="0" class="slider mb-3" id="lGvalueStim" onchange = "setLabelRGB()">
+                        <input type="range" min="0" max="255" value="0" class="slider mb-4" id="lBvalueStim" onchange = "setLabelRGB()">
+                      </div>
+
+                        <script src="{% static "js/RGB_stim_generator.js" %}"></script>
+
+
+
+
         </div>
-    </div>
+        </div>
+
+
+    <input type="text" class="form-control" id="stimulus_name" placeholder="Stimulus Name" oninput= "setNewLabel(this )" >
+
     <button class="btn btn-primary">Save</button>
     <button class="btn btn-primary">Next</button>
 {% endblock %}

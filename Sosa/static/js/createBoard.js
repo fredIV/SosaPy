@@ -30,6 +30,7 @@ function initBoard() {
   // CONTROLS
   BoardControl = new THREE.OrbitControls( BoardCamera, BoardRenderer.domElement );
 
+
   // LIGHT
   hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
   hemiLight.color.setHSL( 0.6, 1, 0.6 );

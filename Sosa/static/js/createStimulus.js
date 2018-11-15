@@ -1,5 +1,5 @@
 // standard global variables
-var pegContainer, pegScene, pegCamera, pegRenderer, pegControls, Pegmaterial, spriteMaterial;
+var pegContainer, pegScene, pegCamera, pegRenderer, pegControls, Pegmaterial, spriteMaterial, peg, mesh;
 var pegLabelSprite;
 initPeg();
 animatePeg();
@@ -53,7 +53,7 @@ var skyBox = new THREE.Mesh( skyBoxGeometry, skyBoxMaterial );
 pegScene.add(skyBox);
 
 //peg
-var peg = new THREE.CylinderGeometry( 5, 5, 15, 100 );
+peg = new THREE.CylinderGeometry( 5, 5, 15, 100 );
 Pegmaterial = new THREE.MeshPhongMaterial({ color: 0x000000, shininess: 30 });
 mesh = new THREE.Mesh( peg, Pegmaterial );
 mesh.position.set(0,0,10);
@@ -133,12 +133,14 @@ pegRenderer.render( pegScene, pegCamera);
 }
 
 
-function setPegRGB(){
-var redHex = rgbToHex(document.getElementById("RvalueStim").value);
+function setPegRGB()
+{
+    var redHex = rgbToHex(document.getElementById("RvalueStim").value);
 var greenHex = rgbToHex(document.getElementById("GvalueStim").value);
 var blueHex = rgbToHex(document.getElementById("BvalueStim").value);
 var stringHex = "0x" + redHex + greenHex + blueHex;
 Pegmaterial.color.setHex(stringHex);
+
 }
 
 function setPeg(r,g,b) {
@@ -164,3 +166,54 @@ var blueHex = rgbToHex(document.getElementById("lBvalueStim").value);
 var stringHex = "0x" + redHex + greenHex + blueHex;
 spriteMaterial.color.setHex(stringHex);
 }
+
+function rgbToHex(rgb){
+  var hex = Number(rgb).toString(16);
+  if (hex.length < 2) {
+    hex = "0" + hex;
+  }
+  return hex;
+
+  function fullColorHex(r,g,b){
+    var red = rgbToHex(r);
+    var green = rgbToHex(g);
+    var blue = rgbToHex(b);
+    return red+green+blue;
+  }
+}
+
+$(document).ready(function() {
+    $("#shapes").click(function() {
+        var name = $("#shapes").val();
+
+       if(name == "Cube") {
+            pegScene.remove(mesh);
+
+           peg = new THREE.CubeGeometry(10, 10, 10);
+        Pegmaterial = new THREE.MeshPhongMaterial({ color: 0x000000, shininess: 30 });
+        mesh = new THREE.Mesh( peg, Pegmaterial );
+        mesh.position.set(0,0,10);
+        pegScene.add(mesh);
+       }
+       else if (name == "Cylinder") {
+             pegScene.remove(mesh);
+            peg = new THREE.CylinderGeometry( 5, 5, 15, 100 );
+        Pegmaterial = new THREE.MeshPhongMaterial({ color: 0x000000, shininess: 30 });
+        mesh = new THREE.Mesh( peg, Pegmaterial );
+        mesh.position.set(0,0,10);
+        pegScene.add(mesh);
+       }
+
+       else if (name == "Cone") {
+            pegScene.remove(mesh);
+            peg = new THREE.CylinderGeometry( 0, 9, 12, 15, 1  );
+        Pegmaterial = new THREE.MeshPhongMaterial({ color: 0x000000, shininess: 30 });
+        mesh = new THREE.Mesh( peg, Pegmaterial );
+        mesh.position.set(0,0,10);
+        pegScene.add(mesh);
+
+       }
+    })
+})
+
+
