@@ -34,9 +34,9 @@
     	{% block js %}{% endblock %}
 	</head>
     <!--TODO Add hidemobile function for deployment-->
-	<body>
+	<body onload="hideMobile()">
         <div class="container">
-		<div class="mx-auto rounded text-center">
+		<div class="mx-auto rounded text-center" id="mx-auto">
             {% block content %}{% endblock %}
             <div class="row justify-content-center">
                 <small>Copyright © Department of Psychology at Georgia Southern 2018</small>

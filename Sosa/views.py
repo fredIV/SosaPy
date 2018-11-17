@@ -10,13 +10,6 @@ def login(request):
     return render(request, 'login.html')
 
 
-def mobile(request):
-    """View function for mobile page"""
-
-    # Render the mobile page
-    return render(request, 'mobile.html')
-
-
 def admin_home(request):
     """View function for admin home page"""
 
@@ -57,3 +50,10 @@ def create_stimulus(request):
 
     # Render the stimulus creation page
     return render(request, 'create_stimulus.html')
+
+
+def create_experiment(request):
+    """View function for the experiment creation page"""
+
+    # Render the stimulus creation page
+    return render(request, 'create_experiment.html')
