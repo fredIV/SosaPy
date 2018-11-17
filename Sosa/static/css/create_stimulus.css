@@ -8,7 +8,7 @@ body {
 
 .container {
 	align-content: center;
-	padding-top: 8%;
+	padding-top: 4%;
 }
 
 .mx-auto {
@@ -19,9 +19,8 @@ body {
 	padding: 20px;
 }
 
-a {
-    margin-top: 20px;
-    margin-bottom: 10px;
+a, button {
+    margin: 10px;
     width: auto;
 }
 
@@ -33,6 +32,8 @@ a {
 }
 
 #settings {
+	margin: 0;
+	z-index: 1;
 	width: 60px;
 	position: absolute;
 	top: 0;
@@ -67,6 +68,10 @@ a {
 
 #ThreeJSPeg {
 	margin-top: 20px;
+}
+
+#shapes {
+	margin-bottom: 10px;
 }
 
 .show {display: block;}
