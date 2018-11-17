@@ -74,4 +74,8 @@ a, button {
 	margin-bottom: 10px;
 }
 
+#displaySliderStimulus, #displaySliderLabel {
+	margin-left: 30px;
+}
+
 .show {display: block;}
